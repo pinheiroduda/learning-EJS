@@ -5,7 +5,30 @@ app.set("view engine", "ejs") //dessa forma, o server espera que estejamos rodan
 
 //criando uma rota - o app carrega tudo que está dentro do express, o get é um método que está dentro do express e o restante é a rota, sendo que o que o res dará como resposta, por assim dizer, será renderizar o index(index.ejs).
 app.get("/", function (req, res){
-  res.render("pages/index")
+  const items = [
+    { 
+      title: "N",
+      message: "ow "
+    },
+    {
+      title: "I",
+      message: ""
+    },
+    {
+      title: "C",
+      message: "an"
+    },
+    {
+      title: "E",
+        message: "xercise this language"
+    },
+  ]
+
+  const subtitle = "A modeling language used to create HTML page using JS"
+  res.render("pages/index", {
+    qualities: items,
+    subtitle: subtitle,
+  })
 }) 
 
 app.get("/about", function (req, res){

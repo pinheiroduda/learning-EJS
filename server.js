@@ -8,6 +8,10 @@ app.get("/", function (req, res){
   res.render("index")
 }) 
 
+app.get("/about", function (req, res){
+  res.render("about")
+}) 
+
 //rodando o servidor - o listen é uma função que existe dentor do express que "ouve" uma porta que, nesse caso, é a 8080. 
-app.listen(8080) 
+app.listen(8080)
 console.log("rodando")

@@ -5,11 +5,11 @@ app.set("view engine", "ejs") //dessa forma, o server espera que estejamos rodan
 
 //criando uma rota - o app carrega tudo que está dentro do express, o get é um método que está dentro do express e o restante é a rota, sendo que o que o res dará como resposta, por assim dizer, será renderizar o index(index.ejs).
 app.get("/", function (req, res){
-  res.render("index")
+  res.render("pages/index")
 }) 
 
 app.get("/about", function (req, res){
-  res.render("about")
+  res.render("pages/about")
 }) 
 
 //rodando o servidor - o listen é uma função que existe dentor do express que "ouve" uma porta que, nesse caso, é a 8080. 
